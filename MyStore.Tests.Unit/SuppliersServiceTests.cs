@@ -10,7 +10,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MyStore.Tests.Unit.Classes
+namespace MyStore.Tests.Unit
 {
     public class SuppliersServiceTests
     {
@@ -28,7 +28,7 @@ namespace MyStore.Tests.Unit.Classes
             //arrange
             var existingSupplier = new Supplier()
             {
-                Supplierid= 1,
+                Supplierid = 1,
                 Address = "acolo",
                 Companyname = "Hidronic",
                 Country = "Romania"
@@ -101,7 +101,7 @@ namespace MyStore.Tests.Unit.Classes
             //assert
 
             actualResult.Should().BeEquivalentTo(suppliers);
-;
+            ;
         }
     }
 }

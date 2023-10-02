@@ -10,7 +10,7 @@ using MyStore.NewFolder;
 using MyStore.Services;
 using NSubstitute;
 
-namespace MyStore.Tests.Unit.Classes
+namespace MyStore.Tests.Unit
 {
     public class CategoriesServiceTests
     {
@@ -31,7 +31,7 @@ namespace MyStore.Tests.Unit.Classes
             {
                 Categoryid = 1,
                 Categoryname = "Test category",
-                Description= "Test description",
+                Description = "Test description",
             };
 
             mockRepository.GetCategoryById(existingCategory.Categoryid)
@@ -202,7 +202,7 @@ namespace MyStore.Tests.Unit.Classes
             //arrange
 
             Category categoryToUpdate = null;
-            
+
             //act
 
             var actualResult = subjectUnderTest.Update(categoryToUpdate);
@@ -213,5 +213,5 @@ namespace MyStore.Tests.Unit.Classes
         }
     }
 
-    
+
 }
