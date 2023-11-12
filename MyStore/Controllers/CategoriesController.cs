@@ -5,6 +5,7 @@ using MyStore.Helpers;
 using MyStore.Models;
 using MyStore.MyStore.Services.Interfaces;
 using MyStore.NewFolder;
+using MyStore.Services;
 
 namespace MyStore.Controllers
 {
@@ -27,6 +28,7 @@ namespace MyStore.Controllers
             //2. adaugam un filtru de cautare in description dupa un nr de caractere
             var pageSize = 2;
             //le iau pe toate
+
             var allCategories = categoryService.GetCategories(pag, text);
 
             //1 2 - > 2(pagesize)*((3 -paginaCurenta)-1))

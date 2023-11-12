@@ -69,7 +69,7 @@ namespace MyStore.Helpers
             model.Contacttitle = domainObject.Contacttitle;
             model.Country = domainObject.Country;
             model.Fax = domainObject.Fax;
-            model.Region    = domainObject.Region;
+            model.Region = domainObject.Region;
 
             return model;
         }
@@ -92,6 +92,36 @@ namespace MyStore.Helpers
 
             return model;
         }
-    }
 
+        public static EmployeeModel ToEmployeeModel(this Employee domainObject)
+        {
+            var model = new EmployeeModel();
+
+            model.Firstname = domainObject.Firstname;
+            model.Lastname= domainObject.Lastname;
+            model.Birthdate = domainObject.Birthdate;
+            model.Hiredate = domainObject.Hiredate;
+            model.Address = domainObject.Address;
+            model.City = domainObject.City;
+            model.Email = domainObject.Email;
+
+            return model;
+        }
+
+        public static Employee ToEmployee(this EmployeeModel domainObject)
+        {
+            var model = new Employee();
+
+            model.Firstname = domainObject.Firstname;
+            model.Lastname = domainObject.Lastname;
+            model.Birthdate = domainObject.Birthdate;
+            model.Hiredate = domainObject.Hiredate;
+            model.Address = domainObject.Address;
+            model.City = domainObject.City;
+            model.Email = domainObject.Email;
+
+            return model;
+        }
+
+    }
 }
