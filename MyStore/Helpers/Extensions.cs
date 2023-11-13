@@ -123,5 +123,37 @@ namespace MyStore.Helpers
             return model;
         }
 
+         public static OrderDetailsModelDto ToOrderModel(this OrderDetail domainObject)
+        {
+            var model = new OrderDetailsModelDto();
+
+            model.Discount = domainObject.Discount;
+            model.Qty = domainObject.Qty;
+            model.Order = domainObject.Order;
+            model.Unitprice = domainObject.Unitprice;
+            model.Product = domainObject.Product;
+            model.Orderid = domainObject.Orderid;
+            model.Productid = domainObject.Productid;
+            
+
+            return model;
+        }
+        public static OrderDetail ToOrder(this OrderDetailsModelDto domainObject)
+        {
+            var model = new OrderDetail();
+
+            model.Discount = domainObject.Discount;
+            model.Qty = domainObject.Qty;
+            model.Order = domainObject.Order;
+            model.Unitprice = domainObject.Unitprice;
+            model.Product = domainObject.Product;
+            model.Orderid = domainObject.Orderid;
+            model.Productid = domainObject.Productid;
+            
+
+            return model;
+        }
+
+
     }
 }
